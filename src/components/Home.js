@@ -55,8 +55,8 @@ function mapStateToProps ({ questions, authedUser, users }) {
 	const unanswered = Object.keys(questions)
 					.filter(question => ! answered.includes(question))
 					.sort((a,b) => questions[b].timestamp - questions[a].timestamp);
-	const myQuestions = users[authedUser].questions.sort((a,b) => questions[b].timestamp - questions[a].timestamp);
-console.log('user is :' , authedUser)
+	const myQuestions = Object.keys(questions).filter(question => questions[question].author === authedUser)
+							.sort((a,b) => questions[b].timestamp - questions[a].timestamp);
 	return {
 		authedUser,
 		questions: {

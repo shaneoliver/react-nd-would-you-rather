@@ -21,7 +21,6 @@ class Login extends Component {
 		e.preventDefault();
         const { dispatch } = this.props
 		dispatch(setAuthedUser(this.state.user))
-		this.props.history.push(`/`)
 	}
 	
 	render() {
@@ -32,8 +31,8 @@ class Login extends Component {
 			<div className="container">
 				<div className="row justify-content-center">
                     <div className="col-12 col-md-8 col-lg-6">
-						<div className="card">
-							<div className="card-header">Login</div>
+						<div className="card border-0 shadow">
+							<div className="card-header border-0">Login</div>
 							<div className="card-body">
 								<form>
 									<div className="form-group">

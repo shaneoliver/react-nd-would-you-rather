@@ -26,11 +26,7 @@ class App extends Component {
 				<Fragment>
 					<Nav />
 					{authedUser === null
-						? <Switch>
-							<Route path='/login' exact component={Login} />
-							<Route path='/leaderboard' exact component={Leaderboard} />
-							<Route component={Login} />
-						</Switch>
+						? <Route component={Login} />
 						: <Switch>
 							<Route path='/' exact component={Home} />
 							<Route path='/add' exact component={Add} />

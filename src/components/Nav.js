@@ -9,7 +9,7 @@ class Nav extends Component {
         e.preventDefault()
         const { dispatch } = this.props
         dispatch(setAuthedUser(null))
-		this.props.history.push(`/login`)
+		this.props.history.push(`/`)
     }
 
     render() {
@@ -24,7 +24,7 @@ class Nav extends Component {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        { user ? (
+                        { user && (
                             <Fragment>
                                 <ul className="navbar-nav align-items-center mr-auto">
                                     <li className="nav-item">
@@ -40,19 +40,6 @@ class Nav extends Component {
                                     </span>
                                     <li className="nav-item">
                                         <a href="/" className="text-link nav-link" onClick={(e) => this.handleLogout(e)}>Logout</a>
-                                    </li>
-                                </ul>
-                            </Fragment>
-                        ) : (
-                            <Fragment>
-                                <ul className="navbar-nav align-items-center mr-auto">
-                                    <li className="nav-item">
-                                        <NavLink to='/leaderboard' exact className="nav-link" activeClassName='active'>Leader Board</NavLink>
-                                    </li>
-                                </ul>
-                                <ul className="navbar-nav align-items-center ml-auto">
-                                    <li className="nav-item">
-                                        <NavLink to='/login' exact className="nav-link" activeClassName='active'>Login</NavLink>
                                     </li>
                                 </ul>
                             </Fragment>
