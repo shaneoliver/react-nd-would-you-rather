@@ -1,0 +1,15 @@
+.navbar-avatar {
+    border-radius: 100%;
+    width: 3rem; 
+    height: 3rem;
+}
+
+.nav-link.active {
+    color: black;
+}
+
+.card-header-avatar {
+    border-radius: 100%;
+    width: 1.5rem; 
+    height: 1.5rem;
+}
